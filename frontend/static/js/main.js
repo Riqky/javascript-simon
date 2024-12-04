@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: 'js',
+    baseUrl: '/static/js',
     paths: {
         // the left side is the module ID,
         // the right side is the path to
@@ -13,8 +13,22 @@ require.config({
     }
 });
 
-require(["jquery", "app/simon"], function($, simon) {
+type = document.getElementById("type").textContent || document.getElementById("#type").innerText;
+console.log(type);
+
+if(type === "show"){
+
+require(["jquery", "/static/js/app/show.js"], function($, simon) {
     $(document).ready(function() {
 		simon.init();
     });
 });
+
+}else if (type === "touch"){
+require(["jquery", "/static/js/app/touch.js"], function($, simon) {
+    $(document).ready(function() {
+		simon.init();
+    });
+});
+}
+
