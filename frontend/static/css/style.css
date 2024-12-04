@@ -8,6 +8,18 @@ body {
 	user-select: none;
 }
 
+.banner{
+    width: 99%;
+    background: red;
+    text-align: center;
+    padding: 7% 0;
+    z-index: 1;
+    position:absolute;
+    top:10%;
+    color: white;
+    font-size: 75px;
+}
+
 h1 {
 	margin: 1em 0 2em;
 	text-align: center;
